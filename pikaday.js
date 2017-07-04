@@ -259,6 +259,8 @@
             // Theme Classname
             theme: null,
 
+            keyboardavigation: false,
+
             // events array
             events: [],
 
@@ -478,6 +480,8 @@
 
             self._onKeyChange = function (e) {
                 e = e || window.event;
+
+                if (!self.keyboardavigation) return;
 
                 if (self.isVisible()) {
 
